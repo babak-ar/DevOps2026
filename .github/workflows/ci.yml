@@ -3,7 +3,9 @@ name: Junior DevOps CI
 
 # مشخص می‌کنیم چه Event ـی workflow رو اجرا کنه
 on:
-  push:          # هر push به repo
+  push:
+   branches:
+   -main # هر push به repo
 
 # تعریف job ها
 jobs:

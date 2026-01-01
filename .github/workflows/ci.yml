@@ -5,7 +5,7 @@ name: Junior DevOps CI
 on:
   push:
    branches:
-   -main # هر push به repo
+    -main # main push به repo
 
 # تعریف job ها
 jobs:

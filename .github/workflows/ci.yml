@@ -1,26 +1,13 @@
-# اسم این workflow (در UI گیت‌هاب می‌بینی)
-name: Junior DevOps CI
+name: DevOps Branch CI
 
-# مشخص می‌کنیم چه Event ـی workflow رو اجرا کنه
 on:
   push:
-   branches:
-    -main # main push به repo
+    branches:
+      - main   # فقط روی main
 
-# تعریف job ها
 jobs:
-  hello-ci:      # اسم job (دلخواه)
-    
-    # روی چه سیستمی اجرا شود
+  test:
     runs-on: ubuntu-latest
-
-    # مراحل اجرایی job
     steps:
-      
-      # مرحله 1: کد repo رو می‌کشه داخل runner
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # مرحله 2: اجرای دستور shell
-      - name: Say Hello
-        run: echo "Hello from DevOps CI 🚀"
+      - uses: actions/checkout@v4
+      - run: echo "CI running only on MAIN branch"

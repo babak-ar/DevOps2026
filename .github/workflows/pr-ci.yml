@@ -1,0 +1,24 @@
+# اسم Pipeline در GitHub UI
+name: Pull Request CI
+
+# این workflow فقط روی Pull Request اجرا می‌شود
+on:
+  pull_request:
+    branches:
+      - main   # هدف merge: main
+
+jobs:
+  pr-check:
+    # Runner رسمی گیت‌هاب (امن + ایزوله)
+    runs-on: ubuntu-latest
+
+    steps:
+      # دریافت کد PR روی runner
+      - name: Checkout PR code
+        uses: actions/checkout@v4
+
+      # تست ساده (فعلاً فقط شبیه‌سازی)
+      - name: Run CI checks
+        run: |
+          echo "Running CI for Pull Request"
+          echo "This code is NOT merged yet"

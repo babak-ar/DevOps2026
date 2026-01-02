@@ -3,7 +3,7 @@ name: Pull request CI
 on:
   pull_request:
     branches:
-      -main
+      - main
 
 jobs:
   pr-check:

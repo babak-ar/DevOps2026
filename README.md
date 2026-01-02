@@ -1,1 +1,1 @@
-# DevOps2026 - 2025 - babak
+# DevOps2026 - 2025

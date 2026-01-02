@@ -8,7 +8,7 @@ on:
       - main   # هدف merge: main
 
 jobs:
-  pr-check:
+  build:
     # Runner رسمی گیت‌هاب (امن + ایزوله)
     runs-on: ubuntu-latest
 
